@@ -35,4 +35,44 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if word is present vertically", function() {
+    const result = wordSearch([
+      ['A', 'W', 'R', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'U', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'B', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'M', 'B', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'H', 'E', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+    ], 'RUBBER')
+    
+    assert.isTrue(result);
+  });
+
+  it("should return true if word is present vertically", function() {
+    const result = wordSearch([
+      ['A', 'W', 'R', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'U', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'A', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'M', 'B', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'H', 'E', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+    ], 'RUBBER')
+    
+    assert.isFalse(result);
+  });
+
+  it("should return true if word is present vertically", function() {
+    const result = wordSearch([
+      ['A', 'W', 'R', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'K', 'C', 'U', 'D', 'L', 'D'],
+      ['Y', 'F', 'A', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'M', 'B', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'H', 'E', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+    ], 'DUCK')
+    
+    assert.isTrue(result);
+  });
+
 });
